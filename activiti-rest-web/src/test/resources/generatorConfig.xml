@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+<classPathEntry  location="/Users/yzw/.m2/repository/mysql/mysql-connector-java/5.1.29/mysql-connector-java-5.1.29.jar" />
+  <context id="activiti-rest-web" >
+        <commentGenerator>  
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->  
+        	<property name="suppressAllComments" value="true" />  
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->  
+      </commentGenerator> 
+   		 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/activiti" userId="root" password="" />
+     <javaTypeResolver>  
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->  
+            <property name="forceBigDecimals" value="true"/>  
+    </javaTypeResolver>
+    <javaModelGenerator targetPackage="com.beebank.dao.entity" targetProject="activiti-rest-web" />
+    <sqlMapGenerator targetPackage="com.beebank.dao.entity.xml" targetProject="activiti-rest-web" />
+    <javaClientGenerator targetPackage="com.beebank.dao.mapper" targetProject="activiti-rest-web" type="XMLMAPPER" />
+
+    <table schema="" tableName="TENANT" />
+  </context>
+</generatorConfiguration>
